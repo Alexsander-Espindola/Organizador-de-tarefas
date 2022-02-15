@@ -13,7 +13,7 @@ const connection = async () => db ?
   Promise.resolve(db) :
   MongoClient.connect(MONGO_DB_URL, OPTIONS)
     .then((conn) => {
-      db = conn.db('tarefas');
+      db = conn.db('todoList');
       return db;
     });
 

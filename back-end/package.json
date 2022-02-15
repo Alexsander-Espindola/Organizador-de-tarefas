@@ -4,7 +4,9 @@
   "description": "Criar um organizador de tarefas do dia a dia",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "dev": "nodemon ."
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
     "mongodb": "^4.3.1"
   },
   "devDependencies": {
+    "eslint": "^8.9.0",
     "nodemon": "^2.0.15"
   }
 }
