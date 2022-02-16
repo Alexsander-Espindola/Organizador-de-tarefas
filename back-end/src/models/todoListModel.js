@@ -11,4 +11,4 @@ const insertOne = (name, itemList) => connection().then(
 module.exports = {
   getAll,
   insertOne,
-}
+};

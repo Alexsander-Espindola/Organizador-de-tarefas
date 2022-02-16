@@ -18,4 +18,14 @@ router.post('/' ,async (req, res, next) => {
   }
 });
 
+router.get('/', async (_req, res, next) => {
+  try {
+    const todoList = await getTodoList();
+    return res.status(200).json(todoList);
+  } catch (error) {
+    console.error(error.err);
+    return next(error);
+  }
+})
+
 module.exports = router;
