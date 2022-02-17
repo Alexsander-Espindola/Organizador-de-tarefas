@@ -5,7 +5,7 @@ const getAll = () => connection().then(
 );
 
 const insertOne = (name, itemList) => connection().then(
-  db => db.collection('todoList').insertOne({ itemList })
+  db => db.collection('todoList').insertOne({ name, itemList })
 );
 
 module.exports = {
