@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+// import socket from '../utils/socket';
 
-function App() {
+const FormComments = () => {
+  const [comments, setComments] = useState([]);
+  const [ name, setName] = useState('');
+  const [ comment, setComment] = useState('');
+
+  const handleClick = () => {
+    console.log(name, comment)
+  }
+
+  // useEffect(() => {
+  //   fetch('http://localhost:3001/')
+  //     .then((response) => response.json())
+  //     .then((comments) => {
+  //       console.log(comments);
+  //     })
+  // }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <form>
+      <ul>
+        {
+          comments.map(({ name, comment}) => (
+            <li>
+              nome = { name } mensagem = { comment }
+            </li>
+          ))
+        }
+      </ul>
+      <label>
+        Nome:
+        <input type="text" onChange={({ target }) => setName(target.value)} name="name" />
+      </label>
+      <label>
+        Sua mensagem:
+        <input onChange={({ target }) => setComment(target.value)} type="text" name="comment" />
+      </label>
+      <button
+        type="button"
+        onClick={ handleClick }
+      >Enviar</button>
+    </form>
   );
-}
+};
 
-export default App;
+export default FormComments;
