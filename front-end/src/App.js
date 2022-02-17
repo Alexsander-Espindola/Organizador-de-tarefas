@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './App.css';
 
 import socket from './utils/socket';
 import TodoListCard from './components/TodoListCard';
@@ -30,22 +31,27 @@ const FormComments = () => {
   }, []);
 
   return (
-    <form>
-      <label>
-        Nome:
-        <input type="text" onChange={({ target }) => setName(target.value)} name="name" />
-      </label>
-      <label>
-        Sua mensagem:
-        <input onChange={({ target }) => setItemList(target.value)} type="text" name="comment" />
-      </label>
-      <button
-        type="button"
-        onClick={ handleClick }
-      >Enviar</button>
+    <form className="form">
+      <div className="labels">
+        <label>
+          Tarefa:
+          <br />
+          <input type="text" onChange={({ target }) => setName(target.value)} name="name" />
+        </label>
+        <label>
+          Descrição da tarefa:
+          <br />
+          <input onChange={({ target }) => setItemList(target.value)} type="text" name="comment" />
+        </label>
+        <button
+          type="button"
+          className="button"
+          onClick={ handleClick }
+        >Adicionar tarefa</button>
+      </div>
       { 
         isLoading ? <p>Carregando</p> : ( 
-          <div>
+          <div className="todoList">
             {
               todoList.map(({_id, name, itemList}) => (
                 <TodoListCard

@@ -1,7 +1,18 @@
-.App {
-  text-align: center;
+.form {
+  border: 1px solid #ccc;
+  background-color: antiquewhite;
+  border-radius: 16px;
+  margin: 10px;
+  padding: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.button {
+  max-height: 21px;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  justify-content: space-between;
 }
