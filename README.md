@@ -1,4 +1,4 @@
-## Desfio tecnico Ebryt
+## Desafio tecnico Ebryt
   ### Contexto
   <p>
       A empresa Ebytr está passando por problemas de produtividade/controle porque as pessoas colaboradoras vêm tendo dificuldade na organização 
