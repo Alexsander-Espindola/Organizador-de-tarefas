@@ -1,0 +1,36 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "Criar um organizador de tarefas do dia a dia",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests",
+    "test:mocha": "nyc --all --include src mocha tests/*.js --exit",
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexsander-Espindola/Organizador-de-tarefas.git"
+  },
+  "author": "Alexsander-Rodrigues-Espindola-De-Almeida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexsander-Espindola/Organizador-de-tarefas/issues"
+  },
+  "homepage": "https://github.com/Alexsander-Espindola/Organizador-de-tarefas#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "frisby": "^2.1.3",
+    "jest": "^27.5.1",
+    "mongodb": "^4.3.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "eslint": "^8.9.0",
+    "mocha": "^9.2.0",
+    "nodemon": "^2.0.15",
+    "nyc": "^15.1.0"
+  }
+}
